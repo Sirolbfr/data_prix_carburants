@@ -55,24 +55,28 @@ Colonnes : 47
 | Prix SP95 Mis à jour le | Date   | 2026-08-25T10:02:31+00:00 |
 | Prix SP95               | Nombre | 2.249                     |
 
-
 ### 3. Remplir la grille qualité (35 min)
 Pour chaque dimension, donnez **au moins un constat chiffré ou un exemple précis** (ligne, colonne, valeur).
 
-| Dimension  | Méthode utilisée dans le tableur              | Constat (chiffré ou exemple) | Gravité (faible / moyenne / forte) |
-| ---------- | --------------------------------------------- | ---------------------------- | ---------------------------------- |
-| Complétude | `NB.VIDE`, filtre sur *(Vides)*               |                              |                                    |
-| Exactitude | Tri, `MIN` / `MAX`, valeurs implausibles      |                              |                                    |
-| Cohérence  | Comparaison entre deux colonnes liées         |                              |                                    |
-| Validité   | Filtre : formats hétérogènes dans une colonne |                              |                                    |
-| Unicité    | MFC *Valeurs en double* sur l'identifiant     |                              |                                    |
-| Fraîcheur  | Date la plus récente vs date du jour          |                              |                                    |
+| Dimension  | Méthode utilisée dans le tableur              | Constat (chiffré ou exemple)                                                                                            | Gravité (faible / moyenne / forte) |
+| ---------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Complétude | `NB.VIDE`, filtre sur *(Vides)*               | 6997 sur prix sp95 mais seulement 457 sur prix (prix combinés)                                                          | Moyenne                            |
+| Exactitude | Tri, `MIN` / `MAX`, valeurs implausibles      | Gazole MIN : 1 valeur en 1.419 -> Implausible<br>Gazole MAX : 2.92 mais suivi par plein de valeurs proches -> Plausible | Faible                             |
+| Cohérence  | Comparaison entre deux colonnes liées         | prix contient des prix que les colonnes individuelles ne contiennent pas (prix Gazole, prix SP95...)                    | Moyenne                            |
+| Validité   | Filtre : formats hétérogènes dans une colonne | geom : précision différente dans certaines cellules                                                                     | Faible                             |
+| Unicité    | MFC *Valeurs en double* sur l'identifiant     | Aucun doublon apparent                                                                                                  | Aucune                             |
+| Fraîcheur  | Date la plus récente vs date du jour          | 18/09/26                                                                                                                | Aucune                             |
 
 ### 4. Proposer des usages (15 min)
 Proposez **deux usages** de ce jeu pour l'agence. Pour chacun :
 - la question métier à laquelle il répond ;
 - la ou les colonnes utilisées ;
 - le défaut qualité qui pourrait fausser la réponse.
+
+| Question métier                                                          | Colonne(s) utilisée(s)                                                                                       | Défaut qualité                                                                 |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| Optimisation pour faire le plein sur une flotte de véhicule d'entreprise | Prix, Ville, Adresse                                                                                         | Formattage hétérogène, valeurs manquantes                                      |
+| Créer une carte des stations-service pour l'impémenter dans Waze/Maps    | Latitude/Longitude, Ville, Horaires détaillés, Prix, MàJ des prix, Carburants dispo, Carbus en rupture temp. | Exactitude des coordonnées,<br>Valeurs manquantes dans la dispo des carburants |
 
 ### 5. Parcours + uniquement : croiser deux sources (en autonomie)
 Trouvez une seconde source pour un même indicateur (ex. population communale INSEE vs portail régional). Comparez les valeurs sur 5 lignes et expliquez les écarts éventuels.
@@ -84,10 +88,10 @@ Dans votre dépôt GitHub :
 
 ## Critères de réussite (C1.1 · niveau 1)
 
-- [ ] La fiche d'identité est complète : source, licence et date de mise à jour sont renseignées.
-- [ ] Les 6 dimensions de la grille sont renseignées, chacune avec un constat précis.
-- [ ] Au moins deux usages sont proposés et reliés à des colonnes réelles du jeu.
-- [ ] Le travail est commité sur GitHub.
+- [x] La fiche d'identité est complète : source, licence et date de mise à jour sont renseignées.
+- [x] Les 6 dimensions de la grille sont renseignées, chacune avec un constat précis.
+- [x] Au moins deux usages sont proposés et reliés à des colonnes réelles du jeu.
+- [x] Le travail est commité sur GitHub.
 
 ## Ressources
 - data.gouv.fr — portail national des données publiques

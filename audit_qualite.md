@@ -44,6 +44,18 @@ Complétez le tableau d'identité ci-dessous **avant** d'ouvrir le fichier.
 - Pour 5 colonnes au choix : nom, type de valeur (texte, nombre, date), exemple de valeur.
 - Signalez tout problème d'ouverture (séparateur, accents mal affichés, dates en texte).
 
+Lignes : 9805
+Colonnes : 47
+
+| Nom                     | Type   | Exemple                   |
+| ----------------------- | ------ | ------------------------- |
+| id                      | Nombre | 89100001                  |
+| code postal             | Nombre | 89100                     |
+| Ville                   | Texte  | Sens                      |
+| Prix SP95 Mis à jour le | Date   | 2026-08-25T10:02:31+00:00 |
+| Prix SP95               | Nombre | 2.249                     |
+
+
 ### 3. Remplir la grille qualité (35 min)
 Pour chaque dimension, donnez **au moins un constat chiffré ou un exemple précis** (ligne, colonne, valeur).
 

@@ -73,10 +73,10 @@ Proposez **deux usages** de ce jeu pour l'agence. Pour chacun :
 - la ou les colonnes utilisées ;
 - le défaut qualité qui pourrait fausser la réponse.
 
-| Question métier                                                          | Colonne(s) utilisée(s)                                                                                       | Défaut qualité                                                                 |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| Optimisation pour faire le plein sur une flotte de véhicule d'entreprise | Prix, Ville, Adresse                                                                                         | Formattage hétérogène, valeurs manquantes                                      |
-| Créer une carte des stations-service pour l'impémenter dans Waze/Maps    | Latitude/Longitude, Ville, Horaires détaillés, Prix, MàJ des prix, Carburants dispo, Carbus en rupture temp. | Exactitude des coordonnées,<br>Valeurs manquantes dans la dispo des carburants |
+| Question métier                                                          | Colonne(s) utilisée(s)                                                                         | Défaut qualité                                                                 |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Optimisation pour faire le plein sur une flotte de véhicule d'entreprise | Prix, Ville, Adresse                                                                           | Formattage hétérogène, valeurs manquantes                                      |
+| Créer une carte des stations-service pour l'impémenter dans Waze/Maps    | Geom, Ville, Horaires détaillés, Prix, MàJ des prix, Carburants dispo, Carbus en rupture temp. | Exactitude des coordonnées,<br>Valeurs manquantes dans la dispo des carburants |
 
 ### 5. Parcours + uniquement : croiser deux sources (en autonomie)
 Trouvez une seconde source pour un même indicateur (ex. population communale INSEE vs portail régional). Comparez les valeurs sur 5 lignes et expliquez les écarts éventuels.
